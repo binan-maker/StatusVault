@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatusVault - Privacy Policy</title>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated: February 2025</strong></p>
+
+    <h2>StatusVault - Your Privacy is Protected</h2>
+    <p>StatusVault is a fully offline application. We do not collect, store, or transmit any personal data.</p>
+
+    <h2>1. Introduction</h2>
+    <p>StatusVault ('we', 'our', 'app') is a WhatsApp Status Saver application for Android. This Privacy Policy explains how we handle information when you use our app. By using StatusVault, you agree to this policy.</p>
+
+    <h2>2. Data We Do NOT Collect</h2>
+    <p>StatusVault does not collect any personal information. We do not collect:</p>
+    <ul>
+        <li>Your name, email, or contact information</li>
+        <li>WhatsApp messages, calls, or chats</li>
+        <li>Contacts or phone numbers</li>
+        <li>Location data</li>
+        <li>Device identifiers or analytics</li>
+        <li>Usage statistics or behavior data</li>
+    </ul>
+    <p>All media is processed locally on your device only.</p>
+
+    <h2>3. Storage Access</h2>
+    <p>StatusVault requires storage access solely to:</p>
+    <ul>
+        <li>Read WhatsApp status files from the .Statuses directory</li>
+        <li>Save selected statuses to your device gallery</li>
+        <li>Create a local backup of saved statuses</li>
+    </ul>
+    <p>We only access the WhatsApp .Statuses folder. We cannot and do not access WhatsApp messages, chats, or any other folders.</p>
+
+    <h2>4. Local Data Storage</h2>
+    <p>StatusVault stores the following data locally on your device only:</p>
+    <ul>
+        <li>A list of statuses you have saved (stored in app's private directory)</li>
+        <li>The SAF (Storage Access Framework) folder URI you granted</li>
+        <li>User preferences (stored in app's private storage)</li>
+    </ul>
+    <p>This data never leaves your device and is deleted when you uninstall the app.</p>
+
+    <h2>5. Advertising</h2>
+    <p>StatusVault displays advertisements via Google AdMob. AdMob may collect certain data in accordance with Google's Privacy Policy. This may include:</p>
+    <ul>
+        <li>Advertising ID (Android)</li>
+        <li>Device information for ad targeting</li>
+        <li>App usage for frequency capping</li>
+    </ul>
+    <p>You can opt out of personalized ads in your device settings:<br>
+    Settings → Google → Ads → Opt out of Ads Personalization.</p>
+    <p>For Google's full privacy policy, visit: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>StatusVault uses the following third-party services:</p>
+    <ul>
+        <li>Google AdMob — for displaying advertisements</li>
+    </ul>
+    <p>All other functionality is performed locally on your device without any network requests.</p>
+
+    <h2>7. Permissions Explained</h2>
+    <p><strong>READ_EXTERNAL_STORAGE / READ_MEDIA_IMAGES / READ_MEDIA_VIDEO:</strong><br>
+    Required to detect and display WhatsApp statuses from the .Statuses folder.</p>
+    <p><strong>WRITE_EXTERNAL_STORAGE (Android &lt; 10):</strong><br>
+    Required to save statuses to the gallery on older devices.</p>
+    <p><strong>STORAGE ACCESS FRAMEWORK (Android 11+):</strong><br>
+    Required for the user to manually grant access to the WhatsApp .Statuses folder on newer Android versions.</p>
+    <p>No permissions are used beyond their stated purpose.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>StatusVault is not directed to children under the age of 13. We do not knowingly collect any information from children. If you believe a child is using this app inappropriately, please contact us.</p>
+
+    <h2>9. Play Store Compliance</h2>
+    <p>This app complies with Google Play Store Developer Program Policies, including:</p>
+    <ul>
+        <li>Honest disclosure of permissions usage</li>
+        <li>No collection of sensitive user data</li>
+        <li>Compliance with Families Policy</li>
+        <li>No deceptive behavior</li>
+    </ul>
+    <p>This app is also compliant with Indus App Store (IndiStore) privacy requirements.</p>
+
+    <h2>10. Disclaimer</h2>
+    <p>StatusVault is an independent application and is NOT affiliated with, endorsed by, or connected to WhatsApp LLC, Meta Platforms Inc., or any of their subsidiaries. 'WhatsApp' is a trademark of WhatsApp LLC. Use of this app is at your own risk.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the 'Last updated' date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or the app, you can reach us through the Play Store developer page or the app's support page.</p>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 StatusVault. All rights reserved.<br>
+        This policy is compliant with GDPR, Google Play Store, and Indus App Store requirements.</p>
+    </footer>
+</body>
+</html>
