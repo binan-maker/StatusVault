@@ -1,105 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Status Saver - WA Vault - Privacy Policy</title>
-</head>
-<body>
-    <h1>Privacy Policy</h1>
-    <p><strong>Last updated: February 2026</strong></p>
-    <p><strong>© 2026 Status Saver - WA Vault</strong></p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StatusVault – Save WhatsApp Statuses</title>
+    <meta name="description" content="StatusVault is a privacy-first Android app to view, save, and share WhatsApp statuses. 100% offline processing." />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+      :root {
+        --bg: #0a0e1a;
+        --card: #111827;
+        --border: #1f2937;
+        --primary: #00c48c;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --heading: #f9fafb;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      nav {
+        background: var(--card);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .logo { font-size: 18px; font-weight: 800; color: var(--primary); letter-spacing: -0.3px; }
+      .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+      .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.15s; }
+      .nav-links a:hover { color: var(--primary); }
+      main { flex: 1; max-width: 900px; margin: 0 auto; padding: 80px 24px 80px; width: 100%; }
+      .hero { text-align: center; margin-bottom: 80px; }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: rgba(0,196,140,0.12);
+        color: var(--primary);
+        border: 1px solid rgba(0,196,140,0.3);
+        border-radius: 20px;
+        padding: 6px 16px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+      h1 { font-size: 48px; font-weight: 900; color: var(--heading); margin: 0 0 16px; line-height: 1.15; }
+      h1 span { color: var(--primary); }
+      .hero-sub { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto 40px; line-height: 1.6; }
+      .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: opacity 0.15s;
+      }
+      .btn:hover { opacity: 0.88; }
+      .btn-primary { background: var(--primary); color: #0a0e1a; }
+      .btn-outline { background: transparent; border: 1px solid rgba(0,196,140,0.4); color: var(--primary); }
+      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 80px; }
+      .feature-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 28px 24px;
+        transition: border-color 0.2s;
+      }
+      .feature-card:hover { border-color: rgba(0,196,140,0.35); }
+      .feature-icon { font-size: 28px; margin-bottom: 14px; }
+      .feature-title { font-size: 16px; font-weight: 700; color: var(--heading); margin-bottom: 8px; }
+      .feature-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+      .pages-section { text-align: center; margin-bottom: 60px; }
+      .pages-section h2 { font-size: 28px; font-weight: 800; color: var(--heading); margin-bottom: 8px; }
+      .pages-section p { color: var(--muted); margin-bottom: 32px; }
+      .pages-grid { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+      .page-link {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px 28px;
+        text-decoration: none;
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 600;
+        transition: border-color 0.2s, color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .page-link:hover { border-color: var(--primary); color: var(--primary); }
+      .page-link .icon { font-size: 18px; }
+      footer {
+        text-align: center;
+        padding: 32px 24px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+      footer a { color: var(--primary); text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
+      footer nav { margin-top: 12px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+      @media (max-width: 600px) {
+        h1 { font-size: 34px; }
+        .hero-sub { font-size: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">StatusVault</div>
+      <div class="nav-links">
+        <a href="./pricing/">Pricing</a>
+        <a href="./privacy-policy/">Privacy Policy</a>
+        <a href="./terms/">Terms</a>
+      </div>
+    </nav>
 
-    <h2>Status Saver - WA Vault - Your Privacy is Protected</h2>
-    <p>The core functionality of the app works offline. However, advertisements require an internet connection. Status Saver - WA Vault does not directly collect, store, or transmit any personal data. However, third-party services such as advertising providers may collect limited data as described below.</p>
+    <main>
+      <div class="hero">
+        <div class="hero-badge">📱 Android App</div>
+        <h1>Save WhatsApp Statuses<br /><span>Instantly</span></h1>
+        <p class="hero-sub">View, save, and share WhatsApp &amp; WhatsApp Business statuses directly on your Android device. 100% offline — your media never leaves your phone.</p>
+        <div class="cta-row">
+          <a href="https://play.google.com/store/apps/details?id=com.binan.statussaver" class="btn btn-primary" target="_blank">
+            ▶ Get on Play Store
+          </a>
+          <a href="./pricing/" class="btn btn-outline">View Pricing</a>
+        </div>
+      </div>
 
-    <h2>1. Introduction</h2>
-    <p>Status Saver - WA Vault ('we', 'our', 'app') is a WhatsApp Status Saver application for Android. This Privacy Policy explains how we handle information when you use our app. By using Status Saver - WA Vault, you agree to this policy.</p>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">🖼️</div>
+          <div class="feature-title">Images &amp; Videos</div>
+          <p class="feature-desc">View and save all WhatsApp status images and videos in one clean interface.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-title">100% Private</div>
+          <p class="feature-desc">All processing happens on your device. Zero uploads. Zero data collection.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title">Lightning Fast</div>
+          <p class="feature-desc">Instant loading with smart caching. No lag, no buffering, no waiting.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👑</div>
+          <div class="feature-title">Go Ad-Free</div>
+          <p class="feature-desc">Remove all ads from ₹29/month. One-time payment, no auto-renewals.</p>
+        </div>
+      </div>
 
-    <h2>2. Data We Do NOT Collect</h2>
-    <p>Status Saver - WA Vault does not collect any personal information. We do not collect:</p>
-    <ul>
-        <li>Your name, email, or contact information</li>
-        <li>WhatsApp messages, calls, or chats</li>
-        <li>Contacts or phone numbers</li>
-        <li>Location data</li>
-        <li>We do not directly collect personal information. However, third-party advertising services may collect device identifiers as described in Section 5</li>
-        <li>Usage statistics or behavior data</li>
-    </ul>
-    <p>All media is processed locally on your device only.</p>
+      <div class="pages-section">
+        <h2>Legal &amp; Info Pages</h2>
+        <p>Everything you need to know about StatusVault</p>
+        <div class="pages-grid">
+          <a href="./privacy-policy/" class="page-link"><span class="icon">🛡️</span> Privacy Policy</a>
+          <a href="./terms/" class="page-link"><span class="icon">📄</span> Terms &amp; Conditions</a>
+          <a href="./pricing/" class="page-link"><span class="icon">💎</span> Pricing Plans</a>
+        </div>
+      </div>
+    </main>
 
-    <h2>3. Storage Access</h2>
-    <p>Status Saver - WA Vault requires storage access solely to:</p>
-    <ul>
-        <li>Read WhatsApp status files from the .Statuses directory</li>
-        <li>Save selected statuses to your device gallery</li>
-        <li>Create a local backup of saved statuses</li>
-    </ul>
-    <p>We only access the WhatsApp .Statuses folder. We cannot and do not access WhatsApp messages, chats, or any other folders.</p>
-
-    <h2>4. Local Data Storage</h2>
-    <p>Status Saver - WA Vault stores the following data locally on your device only:</p>
-    <ul>
-        <li>A list of statuses you have saved (stored in app's private directory)</li>
-        <li>The SAF (Storage Access Framework) folder URI you granted</li>
-        <li>User preferences (stored in app's private storage)</li>
-    </ul>
-    <p>This data never leaves your device and is deleted when you uninstall the app.</p>
-
-    <h2>5. Advertising</h2>
-    <p>Status Saver - WA Vault displays advertisements via Google AdMob. AdMob may collect certain data in accordance with Google's Privacy Policy. This may include:</p>
-    <ul>
-        <li>Advertising ID (Android)</li>
-        <li>Device information for ad targeting</li>
-        <li>App usage for frequency capping</li>
-    </ul>
-    <p>You can opt out of personalized ads in your device settings:<br>
-    Settings → Google → Ads → Opt out of Ads Personalization.</p>
-    <p>Ad services are provided by Google AdMob. Their data practices are governed by Google’s Privacy Policy: https://policies.google.com/privacy</p>
-
-    <h2>6. Third-Party Services</h2>
-    <p>Status Saver - WA Vault uses the following third-party services:</p>
-    <ul>
-        <li>Google AdMob — for displaying advertisements</li>
-    </ul>
-    <p>All other functionality is performed locally on your device without any network requests.</p>
-
-    <h2>7. Permissions Explained</h2>
-    <p><strong>READ_EXTERNAL_STORAGE / READ_MEDIA_IMAGES / READ_MEDIA_VIDEO:</strong><br>
-    Required to detect and display WhatsApp statuses from the .Statuses folder.</p>
-    <p><strong>WRITE_EXTERNAL_STORAGE (Android &lt; 10):</strong><br>
-    Required to save statuses to the gallery on older devices.</p>
-    <p><strong>STORAGE ACCESS FRAMEWORK (Android 11+):</strong><br>
-    Required for the user to manually grant access to the WhatsApp .Statuses folder on newer Android versions.</p>
-    <p>No permissions are used beyond their stated purpose.</p>
-
-    <h2>8. Children's Privacy</h2>
-    <p>Status Saver - WA Vault is not directed to children under the age of 13. We do not knowingly collect any information from children. If you believe a child is using this app inappropriately, please contact us.</p>
-
-    <h2>9. Play Store Compliance</h2>
-    <p>This app complies with Google Play Store Developer Program Policies, including:</p>
-    <ul>
-        <li>Honest disclosure of permissions usage</li>
-        <li>No collection of sensitive user data</li>
-        <li>No deceptive behavior</li>
-    </ul>
-    <p>This app is also compliant with Indus App Store (IndiStore) privacy requirements.</p>
-
-    <h2>10. Disclaimer</h2>
-    <p>Status Saver - WA Vault is an independent application and is NOT affiliated with, endorsed by, or connected to WhatsApp LLC, Meta Platforms Inc., or any of their subsidiaries. 'WhatsApp' is a trademark of WhatsApp LLC. Use of this app is at your own risk.</p>
-
-    <h2>11. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the 'Last updated' date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-
-    <h2>12. Contact Us</h2>
-    <p>If you have questions about this Privacy Policy or the app, you can reach us through the Play Store developer page or the app's support page.
-    Email: ahmedsameerbinan2@gmail.com
-    </p>
-
-    <hr>
     <footer>
-        <p>&copy; 2026 Status Saver - WA Vault. All rights reserved.<br>
-        This policy is designed to align with applicable data protection and platform policies.</p>
+      <p>© 2026 StatusVault · Developed by Binan · Not affiliated with WhatsApp LLC or Meta Platforms Inc.</p>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./privacy-policy/">Privacy Policy</a>
+        <a href="./terms/">Terms &amp; Conditions</a>
+        <a href="./pricing/">Pricing</a>
+      </nav>
     </footer>
-</body>
+  </body>
 </html>
