@@ -1,204 +1,1114 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Terms &amp; Conditions – StatusVault</title>
-    <link rel="icon" type="image/x-icon" href="/StatusVault/favicon.ico">
-    <meta name="description" content="StatusVault Terms and Conditions – pricing, refund policy, legal terms." />
-    <style>
-      *, *::before, *::after { box-sizing: border-box; }
-      :root {
-        --bg: #0a0e1a;
-        --card: #111827;
-        --border: #1f2937;
-        --primary: #00c48c;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --heading: #f9fafb;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Terms & Conditions – StatusVault</title>
+  <link rel="icon" type="image/x-icon" href="/StatusVault/favicon.ico">
+  <meta name="description" content="StatusVault Terms and Conditions – pricing, refund policy, legal terms. Built with transparency.">
+  <meta name="theme-color" content="#0a0e1a" />
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ===== 🔥 ULTRA-PREMIUM DESIGN VARIABLES ===== */
+    :root {
+      /* Deep Space Background */
+      --bg-deep: #030712;
+      --bg-primary: #0a0e1a;
+      --bg-elev-1: rgba(23, 28, 45, 0.85);
+      --bg-elev-2: rgba(31, 41, 55, 0.75);
+      --bg-glass: rgba(17, 24, 39, 0.65);
+      
+      /* Premium Color Palette */
+      --primary: #00c48c;
+      --primary-light: #34d399;
+      --primary-dark: #059669;
+      --primary-glow: rgba(0, 196, 140, 0.35);
+      --primary-glow-strong: rgba(0, 196, 140, 0.6);
+      
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.3);
+      
+      --gold: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-glow: rgba(245, 158, 11, 0.35);
+      
+      --warning: #f97316;
+      --warning-glow: rgba(249, 115, 22, 0.3);
+      
+      /* Typography */
+      --text-primary: #f9fafb;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      /* Advanced Effects */
+      --blur-xl: blur(24px);
+      --blur-2xl: blur(40px);
+      --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+      --shadow-glow: 0 0 60px var(--primary-glow);
+      --shadow-gold: 0 0 70px var(--gold-glow);
+      
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
+      --gradient-gold: linear-gradient(135deg, var(--gold), var(--gold-light));
+      --gradient-warning: linear-gradient(135deg, var(--warning), #fb923c);
+      --gradient-mesh: radial-gradient(ellipse at top, rgba(0,196,140,0.15), transparent 70%),
+                       radial-gradient(ellipse at bottom right, rgba(99,102,241,0.12), transparent 70%),
+                       radial-gradient(ellipse at bottom left, rgba(245,158,11,0.08), transparent 70%);
+      
+      /* Animation Curves */
+      --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      
+      /* Layout */
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --radius-xl: 48px;
+      --radius-full: 9999px;
+      --container: min(900px, 94vw);
+      --header-h: 80px;
+      
+      /* Borders */
+      --border-premium: 1px solid rgba(255, 255, 255, 0.08);
+      --border-glow: 1px solid rgba(0, 196, 140, 0.35);
+    }
+
+    /* ===== 🎨 GLOBAL RESET & BASE ===== */
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: var(--header-h);
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+    }
+    
+    /* ===== ✨ BACKGROUND MASTERPIECE ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: var(--gradient-mesh);
+      z-index: -3;
+      animation: meshFloat 30s ease-in-out infinite alternate;
+      opacity: 0.6;
+    }
+    
+    @keyframes meshFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(1%, -1%) scale(1.02); }
+      50% { transform: translate(-1%, 1%) scale(0.98); }
+      75% { transform: translate(1.5%, 0.5%) scale(1.01); }
+    }
+    
+    /* Animated noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      z-index: -2;
+      pointer-events: none;
+    }
+    
+    /* ===== 🎭 PREMIUM TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      color: var(--text-primary);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 1.875rem);
+      margin: 2.5rem 0 1.25rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+    
+    h3 {
+      font-size: 1.125rem;
+      margin: 1.75rem 0 0.75rem;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+    
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 70ch;
+    }
+    
+    a {
+      color: var(--primary-light);
+      text-decoration: none;
+      transition: all 0.3s var(--ease-premium);
+      position: relative;
+      font-weight: 500;
+    }
+    
+    a:hover {
+      color: var(--primary);
+    }
+    
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s var(--ease-premium);
+    }
+    
+    a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(0, 196, 140, 0.12);
+      color: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      border: 1px solid rgba(0, 196, 140, 0.25);
+    }
+    
+    /* ===== 🧭 PREMIUM HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-h);
+      background: rgba(3, 7, 18, 0.75);
+      backdrop-filter: var(--blur-xl);
+      border-bottom: var(--border-premium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+      z-index: 1000;
+      transition: all 0.4s var(--ease-premium);
+      gap: 1rem;
+    }
+    
+    header.scrolled {
+      background: rgba(3, 7, 18, 0.92);
+      border-bottom-color: rgba(0, 196, 140, 0.2);
+      box-shadow: var(--shadow-premium);
+    }
+    
+    .header-link {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .header-link:hover {
+      color: var(--primary-light);
+      background: rgba(0, 196, 140, 0.08);
+    }
+    
+    .dot { color: var(--text-dim); font-weight: 300; }
+    .page-title { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+    
+    /* ===== 📄 MAIN CONTENT ===== */
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: clamp(4rem, 10vw, 7rem) 1.5rem 5rem;
+      position: relative;
+    }
+    
+    /* ===== 🏷️ BADGE & META ===== */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 196, 140, 0.12);
+      border: var(--border-glow);
+      border-radius: var(--radius-full);
+      padding: 6px 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      animation: badgePulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 196, 140, 0.4); }
+      50% { box-shadow: 0 0 0 8px rgba(0, 196, 140, 0); }
+    }
+    
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: var(--border-premium);
+    }
+    
+    .meta strong { color: var(--text-secondary); }
+    
+    /* ===== ✨ HIGHLIGHT BOX ===== */
+    .highlight {
+      background: linear-gradient(135deg, rgba(0,196,140,0.1), rgba(99,102,241,0.08));
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: var(--blur-xl);
+      border: var(--border-premium);
+    }
+    
+    .highlight.warning {
+      background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(251,146,60,0.08));
+      border-left-color: var(--warning);
+    }
+    
+    .highlight::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gradient-primary);
+      animation: shine 3s ease-in-out infinite;
+    }
+    
+    .highlight.warning::before {
+      background: var(--gradient-warning);
+    }
+    
+    @keyframes shine {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    
+    .highlight strong { color: var(--text-primary); }
+    
+    /* ===== 📋 CONTENT SECTIONS ===== */
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: calc(var(--header-h) + 2rem);
+    }
+    
+    ul {
+      margin: 0 0 1.25rem 1.5rem;
+      padding-left: 0.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.625rem;
+      color: var(--text-secondary);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+    
+    li.danger::before {
+      content: '✕';
+      color: #ef4444;
+    }
+    
+    li strong { color: var(--text-primary); }
+    
+    /* ===== 💰 PRICING TABLE - PREMIUM ===== */
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--bg-glass);
+      border: var(--border-premium);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      backdrop-filter: var(--blur-xl);
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-premium);
+    }
+    
+    .pricing-table thead {
+      background: var(--bg-elev-2);
+    }
+    
+    .pricing-table th {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .pricing-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+    
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .pricing-table tr:hover td {
+      background: rgba(0, 196, 140, 0.04);
+    }
+    
+    .price {
+      color: var(--primary-light);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    
+    /* ===== 🔐 CONTACT CARD ===== */
+    .contact-card {
+      background: var(--bg-glass);
+      border: var(--border-premium);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin: 2rem 0;
+      backdrop-filter: var(--blur-xl);
+      box-shadow: var(--shadow-premium);
+      transition: all 0.4s var(--ease-premium);
+      border-left: 4px solid var(--primary);
+    }
+    
+    .contact-card:hover {
+      border-color: rgba(0, 196, 140, 0.45);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow), var(--shadow-premium);
+    }
+    
+    .contact-card p {
+      margin-bottom: 0.875rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .contact-card p:last-child { margin-bottom: 0; }
+    
+    .contact-card strong {
+      color: var(--text-primary);
+      min-width: 140px;
+      display: inline-block;
+    }
+    
+    .contact-card a {
+      word-break: break-all;
+    }
+    
+    /* ===== ⚙️ TECH STACK BADGES ===== */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-elev-1);
+      border: var(--border-premium);
+      border-radius: var(--radius-sm);
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .tech-badge:hover {
+      border-color: var(--primary);
+      color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+    
+    .tech-badge span {
+      font-size: 1.1em;
+    }
+    
+    /* ===== ⚠️ WARNING CALLOUT ===== */
+    .warning-callout {
+      display: flex;
+      gap: 1rem;
+      background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(251,146,60,0.08));
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      align-items: flex-start;
+    }
+    
+    .warning-callout .icon {
+      font-size: 1.5rem;
+      color: var(--warning);
+      flex-shrink: 0;
+    }
+    
+    .warning-callout p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+    
+    /* ===== 📜 SECTION NAVIGATION ===== */
+    .toc {
+      background: var(--bg-glass);
+      border: var(--border-premium);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      backdrop-filter: var(--blur-xl);
+    }
+    
+    .toc h4 {
+      font-size: 0.9rem;
+      margin: 0 0 1rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+    
+    .toc li {
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    .toc li::before { display: none; }
+    
+    .toc a {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .toc a:hover {
+      color: var(--primary-light);
+    }
+    
+    .toc a::after { display: none; }
+    
+    /* ===== 🦶 PREMIUM FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+      border-top: var(--border-premium);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4rem;
+      background: var(--bg-elev-1);
+      position: relative;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    
+    footer p { margin-bottom: 1.5rem; }
+    footer a { color: var(--primary-light); }
+    footer a:hover { color: var(--primary); }
+    
+    footer nav {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    footer nav a {
+      font-weight: 500;
+      position: relative;
+      padding: 4px 0;
+    }
+    
+    footer nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 100%; height: 1px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s var(--ease-premium);
+    }
+    
+    footer nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    
+    /* ===== ✨ ANIMATIONS & UTILS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate {
+      animation: fadeInUp 0.7s var(--ease-premium) forwards;
+      opacity: 0;
+    }
+    
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg-elev-2);
+      border-radius: 4px;
+      border: 2px solid var(--bg-deep);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+    
+    /* Selection */
+    ::selection {
+      background: var(--primary);
+      color: #030712;
+    }
+    
+    /* Focus */
+    a:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+      border-radius: var(--radius-sm);
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
       }
-      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.7; }
-      header { background: var(--card); border-bottom: 1px solid var(--border); padding: 20px 24px; display: flex; align-items: center; gap: 12px; }
-      header a { color: var(--primary); text-decoration: none; font-size: 14px; }
-      header a:hover { text-decoration: underline; }
-      .dot { color: var(--muted); }
-      main { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
-      h1 { font-size: 32px; font-weight: 800; color: var(--heading); margin: 0 0 8px; }
-      .meta { color: var(--muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-      .badge { display: inline-block; background-color: rgba(0,196,140,0.12); color: var(--primary); border: 1px solid rgba(0,196,140,0.3); border-radius: 20px; padding: 3px 12px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
-      h2 { font-size: 20px; font-weight: 700; color: var(--heading); margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-      h3 { font-size: 16px; font-weight: 600; color: var(--heading); margin: 20px 0 8px; }
-      p { margin: 0 0 16px; }
-      ul { margin: 0 0 16px; padding-left: 24px; }
-      li { margin-bottom: 6px; }
-      .highlight { background: rgba(0,196,140,0.08); border-left: 3px solid var(--primary); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
-      .pricing-table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 10px; overflow: hidden; }
-      .pricing-table th { background: var(--card); color: var(--heading); padding: 12px 16px; text-align: left; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); }
-      .pricing-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); font-size: 14px; background: rgba(255,255,255,0.02); }
-      .pricing-table tr:last-child td { border-bottom: none; }
-      .price { color: var(--primary); font-weight: 700; font-size: 16px; }
-      .contact-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 24px 0; }
-      .contact-card a { color: var(--primary); }
-      footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
-      footer a { color: var(--primary); text-decoration: none; }
-      footer a:hover { text-decoration: underline; }
-      footer nav { margin-top: 12px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="../">← StatusVault</a>
-      <span class="dot">·</span>
-      <span style="color:var(--muted);font-size:14px">Terms &amp; Conditions</span>
-    </header>
+      html { scroll-behavior: auto; }
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+      h2 { font-size: clamp(1.25rem, 6vw, 1.5rem); }
+      .meta { flex-direction: column; gap: 0.5rem; }
+      .contact-card p { flex-direction: column; gap: 0.25rem; }
+      .contact-card strong { min-width: auto; }
+      .pricing-table { font-size: 0.9rem; }
+      .pricing-table th, .pricing-table td { padding: 0.75rem 1rem; }
+    }
+    
+    /* Print */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+      header, body::before, body::after,
+      .highlight::before, .contact-card,
+      .tech-badge, .warning-callout {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+      }
+      a { color: #0066cc; text-decoration: underline; }
+      a::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Premium Header -->
+  <header id="header">
+    <a href="../" class="header-link">
+      <span>←</span> StatusVault
+    </a>
+    <span class="dot">·</span>
+    <span class="page-title">Terms & Conditions</span>
+  </header>
 
-    <main>
-      <div class="badge">Legal Document</div>
-      <h1>Terms &amp; Conditions</h1>
-      <div class="meta">
-        Last updated: <strong>April 17, 2026</strong> &nbsp;·&nbsp;
-        Effective date: <strong>April 17, 2026</strong> &nbsp;·&nbsp;
-        App version: <strong>1.3.3</strong>
-      </div>
+  <main>
+    <div class="badge animate">⚖️ Legal Document</div>
+    
+    <h1 class="animate delay-1">Terms & Conditions</h1>
+    
+    <div class="meta animate delay-2">
+      <span>Last updated: <strong>May 1, 2026</strong></span>
+      <span>·</span>
+      <span>Effective date: <strong>May 1, 2026</strong></span>
+      <span>·</span>
+      <span>App version: <strong>1.4.0+</strong></span>
+      <span>·</span>
+      <span>Package: <code>com.binan.statussaver</code></span>
+    </div>
 
-      <div class="highlight">
-        By downloading or using StatusVault, you agree to these Terms &amp; Conditions. Please read them carefully. If you do not agree, do not use the app.
-      </div>
+    <!-- Executive Summary -->
+    <div class="highlight animate delay-3">
+      <strong>By downloading or using StatusVault, you agree to these Terms & Conditions.</strong> Please read them carefully. If you do not agree, do not install or use the app. These Terms work together with our <a href="../privacy-policy/">Privacy Policy</a> to govern your use of StatusVault.
+    </div>
 
-      <h2>1. Acceptance of Terms</h2>
-      <p>These Terms &amp; Conditions ("Terms") govern your use of the StatusVault Android application ("App") and related services, operated by the independent developer Binan ("Developer", "we", "us", "I"). By installing or using the App, you agree to be bound by these Terms and our <a href="../privacy-policy/" style="color:var(--primary)">Privacy Policy</a>.</p>
-
-      <h2>2. Description of Service</h2>
-      <p>StatusVault is an Android utility application that allows users to view and save WhatsApp and WhatsApp Business status media (images and videos) that are already present on the user's own device. The App operates entirely offline — all media processing occurs locally on your device.</p>
-      <p><strong>StatusVault is not affiliated with, endorsed by, or connected to WhatsApp LLC or Meta Platforms Inc.</strong> "WhatsApp" is a registered trademark of WhatsApp LLC.</p>
-
-      <h2>3. License and Permitted Use</h2>
-      <p>We grant you a limited, non-exclusive, non-transferable, revocable licence to use the App on your Android device for personal, non-commercial purposes, subject to these Terms.</p>
-      <p>You agree NOT to:</p>
+    <!-- Table of Contents -->
+    <nav class="toc animate">
+      <h4>📑 Quick Navigation</h4>
       <ul>
-        <li>Copy, modify, distribute, or reverse-engineer any part of the App</li>
-        <li>Use the App to infringe the intellectual property rights of others</li>
-        <li>Use the App for any unlawful purpose</li>
-        <li>Attempt to access or modify the server-side systems of the App</li>
-        <li>Resell, sublicense, or commercially exploit the App or its features</li>
-        <li>Save or share content belonging to others without their permission</li>
+        <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+        <li><a href="#service">2. Description of Service</a></li>
+        <li><a href="#license">3. License & Permitted Use</a></li>
+        <li><a href="#responsibilities">4. User Responsibilities</a></li>
+        <li><a href="#pricing">5. Subscription Plans & Pricing</a></li>
+        <li><a href="#payments">6. Payment Processing</a></li>
+        <li><a href="#refunds">7. Refund Policy</a></li>
+        <li><a href="#ads">8. Free Tier & Advertisements</a></li>
+        <li><a href="#ip">9. Intellectual Property</a></li>
+        <li><a href="#warranties">10. Disclaimer of Warranties</a></li>
+        <li><a href="#liability">11. Limitation of Liability</a></li>
+        <li><a href="#governing">12. Governing Law</a></li>
+        <li><a href="#termination">13. Termination</a></li>
+        <li><a href="#changes">14. Changes to Terms</a></li>
+        <li><a href="#contact">15. Contact Information</a></li>
       </ul>
+    </nav>
 
+    <!-- Section 1 -->
+    <section id="acceptance" class="animate">
+      <h2>1. Acceptance of Terms</h2>
+      <p>These Terms & Conditions ("Terms") govern your use of the StatusVault Android application ("App") and related services, operated by the independent developer Binan ("Developer", "we", "us", "I"). By installing, accessing, or using the App, you agree to be bound by these Terms and our <a href="../privacy-policy/">Privacy Policy</a>.</p>
+      <p>If you are using the App on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="service" class="animate delay-1">
+      <h2>2. Description of Service</h2>
+      <p>StatusVault is an Android utility application built with <strong>Expo/React Native</strong> that allows users to view and save WhatsApp and WhatsApp Business status media (images and videos) that are already present on the user's own device. The App operates entirely offline for media processing — all status viewing and saving occurs locally on your device.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-badge"><span>⚛️</span> React Native</span>
+        <span class="tech-badge"><span>🔥</span> Firebase</span>
+        <span class="tech-badge"><span>💳</span> Razorpay</span>
+        <span class="tech-badge"><span>📱</span> Google AdMob</span>
+        <span class="tech-badge"><span>🚂</span> Railway (Backend)</span>
+      </div>
+      
+      <div class="warning-callout">
+        <span class="icon">⚠️</span>
+        <p><strong>Important:</strong> StatusVault is <strong>not affiliated with, endorsed by, or connected to WhatsApp LLC or Meta Platforms Inc.</strong> "WhatsApp" is a registered trademark of WhatsApp LLC. StatusVault only accesses status files that WhatsApp has already saved to your device's public storage directory.</p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="license" class="animate delay-2">
+      <h2>3. License and Permitted Use</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App on your Android device for personal, non-commercial purposes, subject to these Terms.</p>
+      
+      <p><strong>You agree NOT to:</strong></p>
+      <ul>
+        <li class="danger">Copy, modify, distribute, decompile, or reverse-engineer any part of the App</li>
+        <li class="danger">Use the App to infringe the intellectual property, privacy, or publicity rights of others</li>
+        <li class="danger">Use the App for any unlawful, fraudulent, or harmful purpose</li>
+        <li class="danger">Attempt to access, modify, or interfere with our server-side systems (hosted on Railway)</li>
+        <li class="danger">Resell, sublicense, or commercially exploit the App or its features</li>
+        <li class="danger">Save or share content belonging to others without their explicit permission</li>
+        <li class="danger">Use automated scripts, bots, or tools to interact with the App</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="responsibilities" class="animate delay-3">
       <h2>4. User Responsibilities</h2>
       <p>You are solely responsible for:</p>
       <ul>
-        <li>Ensuring you have permission to save and share any status you download via this App</li>
-        <li>Complying with WhatsApp's Terms of Service and applicable copyright laws</li>
+        <li>Ensuring you have permission to save and share any status content you download via this App</li>
+        <li>Complying with WhatsApp's Terms of Service and applicable copyright, privacy, and data protection laws</li>
         <li>Respecting the privacy and intellectual property rights of status creators</li>
-        <li>Keeping your Google account credentials secure</li>
+        <li>Keeping your Google account credentials secure (if using Google Sign-In for Pro sync)</li>
+        <li>Maintaining a compatible Android device (Android 8.0+) with sufficient storage space</li>
+        <li>Ensuring your device meets the App's technical requirements as listed on the Play Store</li>
       </ul>
+    </section>
 
+    <!-- Section 5 -->
+    <section id="pricing" class="animate">
       <h2>5. Subscription Plans and Pricing</h2>
-      <p>StatusVault offers optional Pro subscriptions to remove ads. Current pricing (in Indian Rupees, inclusive of all taxes):</p>
+      <p>StatusVault offers optional Pro subscriptions to remove advertisements. All prices are in Indian Rupees (INR) and inclusive of applicable GST.</p>
 
-      <table class="pricing-table">
+      <table class="pricing-table animate delay-1">
         <thead>
           <tr>
             <th>Plan</th>
             <th>Duration</th>
             <th>Price</th>
-            <th>Benefit</th>
+            <th>Key Benefit</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Monthly</td>
+            <td><strong>Monthly</strong></td>
             <td>30 days</td>
             <td class="price">₹29</td>
-            <td>Remove all ads for 30 days</td>
+            <td>Ad-free experience for 1 month</td>
           </tr>
           <tr>
-            <td>3 Months</td>
+            <td><strong>3 Months</strong></td>
             <td>90 days</td>
             <td class="price">₹79</td>
-            <td>Ad-free for 3 full months</td>
+            <td>Save 10% vs. monthly</td>
           </tr>
           <tr>
-            <td>Yearly</td>
+            <td><strong>Yearly</strong> ⭐</td>
             <td>365 days</td>
             <td class="price">₹149</td>
-            <td>No ads + priority support for a full year</td>
+            <td>Best value + priority support</td>
           </tr>
         </tbody>
       </table>
 
-      <ul>
-        <li>All subscriptions are <strong>one-time payments</strong> (not recurring/auto-renewing).</li>
-        <li>Access is granted for the purchased duration from the date of payment confirmation.</li>
-        <li>If you purchase while an existing subscription is still active, the new duration is <strong>stacked on top</strong> — you never lose a day you already paid for.</li>
-        <li>Prices are displayed in INR and are inclusive of applicable taxes.</li>
-        <li>We reserve the right to change prices at any time. Changes do not affect existing subscriptions.</li>
+      <ul class="animate delay-2">
+        <li>All subscriptions are <strong>one-time payments</strong> (not recurring/auto-renewing subscriptions).</li>
+        <li>Pro access is granted immediately upon successful payment confirmation via Razorpay.</li>
+        <li>If you purchase while an existing Pro subscription is still active, the new duration is <strong>stacked on top</strong> — you never lose a day you already paid for.</li>
+        <li>Prices are displayed in INR. We reserve the right to change prices at any time; changes do not affect active subscriptions.</li>
+        <li>Pro benefits include: ad removal, cross-device sync (via Google Sign-In), and priority email support (Yearly plan only).</li>
       </ul>
+    </section>
 
+    <!-- Section 6 -->
+    <section id="payments" class="animate delay-1">
       <h2>6. Payment Processing</h2>
-      <p>All payments are processed by <strong>Razorpay Software Private Limited</strong>, a licensed payment aggregator regulated by the Reserve Bank of India (RBI). By making a payment, you also agree to Razorpay's <a href="https://razorpay.com/terms/" style="color:var(--primary)">Terms of Service</a> and <a href="https://razorpay.com/privacy/" style="color:var(--primary)">Privacy Policy</a>.</p>
-      <p>We accept payments via UPI, credit/debit cards, net banking, and other methods supported by Razorpay. Payment verification is performed server-side using cryptographic signature verification.</p>
+      <p>All payments are processed securely by <strong>Razorpay Software Private Limited</strong>, a licensed payment aggregator regulated by the Reserve Bank of India (RBI). By making a payment, you also agree to Razorpay's <a href="https://razorpay.com/terms/" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+      
+      <p><strong>Supported payment methods via Razorpay:</strong></p>
+      <ul>
+        <li>UPI (PhonePe, Google Pay, Paytm, BHIM, etc.)</li>
+        <li>Credit/Debit Cards (Visa, Mastercard, RuPay, American Express)</li>
+        <li>Net Banking (50+ Indian banks)</li>
+        <li>Wallets (Paytm Wallet, Mobikwik, etc.)</li>
+      </ul>
+      
+      <p><strong>Security measures:</strong></p>
+      <ul>
+        <li>Payment verification via HMAC-SHA256 signature validation on our Railway-hosted backend</li>
+        <li>No raw payment credentials, card numbers, or UPI PINs ever touch our servers</li>
+        <li>All API communication enforced over HTTPS with TLS 1.2+</li>
+        <li>Firebase Authentication tokens required for all authenticated requests</li>
+      </ul>
+    </section>
 
+    <!-- Section 7 -->
+    <section id="refunds" class="animate delay-2">
       <h2>7. Refund and Cancellation Policy</h2>
-      <div class="highlight">
-        <strong>General Policy:</strong> Due to the nature of digital goods, all sales are final. We do not offer refunds once a subscription has been activated and access has been granted.
+      
+      <div class="highlight warning animate">
+        <strong>General Policy:</strong> Due to the instant digital nature of Pro access, all sales are final. We do not offer refunds once a subscription has been activated and access has been granted.
       </div>
+      
       <p><strong>Exceptions — we will issue a refund if:</strong></p>
       <ul>
-        <li>You were charged but your subscription was not activated (technical failure on our end). Contact us within 7 days with your payment ID.</li>
-        <li>You were charged twice for the same subscription period.</li>
-        <li>The App is found to be fundamentally non-functional on your device and we are unable to resolve the issue within 14 days of your report.</li>
+        <li>You were charged but your Pro subscription was not activated due to a technical failure on our end. Contact us within 7 days with your Razorpay Payment ID.</li>
+        <li>You were charged twice for the same subscription period (duplicate transaction).</li>
+        <li>The App is fundamentally non-functional on your specific device and we are unable to resolve the issue within 14 days of your detailed report.</li>
       </ul>
-      <p><strong>How to request a refund:</strong> Email <a href="mailto:ahmedsameerbinan2@gmail.com" style="color:var(--primary)">ahmedsameerbinan2@gmail.com</a> with your order ID, payment ID, and the reason for your request. Refund requests are reviewed within 5 business days. Approved refunds are processed via the original payment method within 7–10 business days.</p>
-      <p>Refund disputes can also be raised with Razorpay directly through the Razorpay customer portal.</p>
+      
+      <p><strong>How to request a refund:</strong></p>
+      <ol>
+        <li>Email <a href="mailto:ahmedsameerbinan2@gmail.com">ahmedsameerbinan2@gmail.com</a> with your Order ID, Razorpay Payment ID, and detailed reason.</li>
+        <li>Refund requests are reviewed within 5 business days.</li>
+        <li>Approved refunds are processed via the original payment method within 7–10 business days.</li>
+      </ol>
+      
+      <p>Refund disputes can also be raised directly with Razorpay through their <a href="https://razorpay.com/support/" target="_blank" rel="noopener">Customer Support Portal</a>.</p>
+    </section>
 
+    <!-- Section 8 -->
+    <section id="ads" class="animate delay-3">
       <h2>8. Free Tier and Advertisements</h2>
-      <p>The free tier of StatusVault displays advertisements served by Google AdMob. By using the free tier, you acknowledge and consent to the display of ads as described in our Privacy Policy. Ads are removed for the duration of an active Pro subscription.</p>
-
-      <h2>9. Intellectual Property</h2>
-      <p>All content within the App (excluding WhatsApp statuses which belong to their respective creators) including but not limited to the UI design, source code, icons, logos, and text is the intellectual property of the Developer. You may not reproduce, distribute, or create derivative works without express written permission.</p>
-
-      <h2>10. Disclaimer of Warranties</h2>
-      <p>The App is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to:</p>
+      <p>The free tier of StatusVault displays non-personalized advertisements served by <strong>Google AdMob</strong> (via the <code>react-native-google-mobile-ads</code> library). By using the free tier, you acknowledge and consent to the display of ads as described in our Privacy Policy and Google's <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Ad Technologies Policy</a>.</p>
+      
+      <p><strong>Ad experience details:</strong></p>
       <ul>
-        <li>Uninterrupted or error-free operation</li>
-        <li>Compatibility with all Android devices or future Android versions</li>
-        <li>Access to WhatsApp status files (which depends on WhatsApp's own storage behaviour)</li>
+        <li>Ads are displayed as banner ads and occasional interstitial ads between actions</li>
+        <li>Ad content is selected by Google's algorithms, not by StatusVault</li>
+        <li>Pro subscription removes all ads for the duration of your active plan</li>
+        <li>You can opt out of personalized ads via your Google Account settings</li>
       </ul>
-      <p>StatusVault's ability to access WhatsApp statuses depends on WhatsApp's current storage implementation. Future updates to WhatsApp may affect functionality. This is outside our control.</p>
+      
+      <div class="warning-callout">
+        <span class="icon">ℹ️</span>
+        <p>AdMob may collect anonymized analytics (ad impressions, clicks) and your Advertising ID (if permitted) as described in Google's Privacy Policy. This data is not shared with StatusVault beyond aggregate performance metrics.</p>
+      </div>
+    </section>
 
+    <!-- Section 9 -->
+    <section id="ip" class="animate">
+      <h2>9. Intellectual Property</h2>
+      <p>All content within the App (excluding WhatsApp statuses, which belong to their respective creators) — including but not limited to the UI design, source code, icons, logos, animations, text, and branding — is the intellectual property of the Developer (Binan) and protected by Indian and international copyright laws.</p>
+      
+      <p><strong>You may not:</strong></p>
+      <ul>
+        <li>Reproduce, distribute, or create derivative works of the App's code or design</li>
+        <li>Use StatusVault's name, logo, or branding without express written permission</li>
+        <li>Scrape, copy, or republish content from the App or associated website</li>
+      </ul>
+      
+      <p>The App's source code is publicly available at <a href="https://github.com/binan-maker/WAStatusSaver" target="_blank" rel="noopener">github.com/binan-maker/WAStatusSaver</a> under the terms of its open-source license (if applicable). This does not grant commercial redistribution rights.</p>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="warranties" class="animate delay-1">
+      <h2>10. Disclaimer of Warranties</h2>
+      <p>The App is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, either express or implied, including but not limited to:</p>
+      <ul>
+        <li>Uninterrupted, error-free, or secure operation</li>
+        <li>Compatibility with all Android devices, OS versions, or WhatsApp versions</li>
+        <li>Continued access to WhatsApp status files (which depends on WhatsApp's storage implementation)</li>
+        <li>Accuracy, completeness, or reliability of any content accessed via the App</li>
+      </ul>
+      
+      <div class="warning-callout">
+        <span class="icon">🔄</span>
+        <p><strong>WhatsApp Dependency Notice:</strong> StatusVault's ability to access WhatsApp statuses depends entirely on WhatsApp's current storage behavior. Future WhatsApp updates may change file paths, permissions, or encryption, which could temporarily or permanently affect StatusVault's functionality. This is outside our control, and we are not liable for such changes.</p>
+      </div>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="liability" class="animate delay-2">
       <h2>11. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by applicable law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of data, loss of profits, or any other commercial damages arising from your use of the App. Our total liability to you for any claim shall not exceed the amount you paid for the App in the 12 months preceding the claim.</p>
+      <p>To the maximum extent permitted by applicable law (including the Indian Consumer Protection Act, 2019), the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+      <ul>
+        <li>Loss of data, media files, or device functionality</li>
+        <li>Loss of profits, revenue, or business opportunities</li>
+        <li>Claims by third parties related to content you save or share</li>
+        <li>Any damages arising from WhatsApp policy changes or App Store decisions</li>
+      </ul>
+      
+      <p><strong>Our total aggregate liability</strong> to you for any claim arising from these Terms or your use of the App shall not exceed the amount you paid for the App (if any) in the 12 months preceding the claim, or ₹100 (one hundred rupees), whichever is greater.</p>
+    </section>
 
+    <!-- Section 12 -->
+    <section id="governing" class="animate delay-3">
       <h2>12. Governing Law and Disputes</h2>
-      <p>These Terms are governed by the laws of India. Any disputes arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts of India. Before initiating legal proceedings, you agree to attempt to resolve the dispute informally by contacting us at <a href="mailto:ahmedsameerbinan2@gmail.com" style="color:var(--primary)">ahmedsameerbinan2@gmail.com</a>.</p>
-      <p>Consumer disputes may also be addressed through the National Consumer Disputes Redressal Commission (NCDRC) or the Online Dispute Resolution (ODR) portal of the Government of India.</p>
+      <p>These Terms are governed by and construed in accordance with the laws of India, without regard to its conflict of law principles.</p>
+      
+      <p><strong>Dispute resolution:</strong></p>
+      <ol>
+        <li>Before initiating any legal proceedings, you agree to attempt to resolve the dispute informally by contacting us at <a href="mailto:ahmedsameerbinan2@gmail.com">ahmedsameerbinan2@gmail.com</a>.</li>
+        <li>If unresolved, disputes shall be subject to the exclusive jurisdiction of the courts located in Kerala, India.</li>
+        <li>Consumer disputes may also be addressed through the <a href="https://consumerhelpline.gov.in/" target="_blank" rel="noopener">National Consumer Helpline</a>, the National Consumer Disputes Redressal Commission (NCDRC), or the Government of India's <a href="https://odr.nic.in/" target="_blank" rel="noopener">Online Dispute Resolution (ODR) portal</a>.</li>
+      </ol>
+    </section>
 
+    <!-- Section 13 -->
+    <section id="termination" class="animate">
       <h2>13. Termination</h2>
-      <p>We reserve the right to terminate or suspend your access to the App at any time, without notice, if you violate these Terms. Upon termination, your right to use the App immediately ceases. Subscription fees are non-refundable upon termination for Terms violations.</p>
+      <p>We reserve the right to terminate or suspend your access to the App at any time, without prior notice or liability, if you violate these Terms. Upon termination:</p>
+      <ul>
+        <li>Your right to use the App immediately ceases</li>
+        <li>Any active Pro subscription is terminated without refund (if terminated for Terms violation)</li>
+        <li>Sections of these Terms that by their nature should survive termination (including Intellectual Property, Disclaimer of Warranties, Limitation of Liability, and Governing Law) shall survive</li>
+      </ul>
+      <p>You may also terminate these Terms at any time by uninstalling the App from your device and deleting your account (if created) via Settings → Delete Account.</p>
+    </section>
 
+    <!-- Section 14 -->
+    <section id="changes" class="animate delay-1">
       <h2>14. Changes to Terms</h2>
-      <p>We may revise these Terms at any time. The updated Terms will be posted at this URL with a new "Last updated" date. Your continued use of the App after any changes constitutes acceptance of the new Terms.</p>
+      <p>We may revise these Terms at any time to reflect changes in our services, legal requirements, or business practices. The updated Terms will be posted at this URL with a new "Last updated" date.</p>
+      
+      <p><strong>Your acceptance:</strong> Your continued use of the App after any changes constitutes acceptance of the new Terms. For material changes that significantly affect your rights or obligations, we will provide at least 7 days' notice via an in-app notification before the changes take effect.</p>
+      
+      <p>We encourage you to review this page periodically to stay informed about our terms and policies.</p>
+    </section>
 
+    <!-- Section 15 -->
+    <section id="contact" class="animate delay-2">
       <h2>15. Contact Information</h2>
       <div class="contact-card">
-        <p><strong>Developer:</strong> Binan</p>
-        <p><strong>App:</strong> StatusVault (com.binan.statussaver)</p>
+        <p><strong>Developer:</strong> Binan (Ahmed Sameer Binan)</p>
+        <p><strong>App:</strong> StatusVault (<code>com.binan.statussaver</code>)</p>
         <p><strong>Email:</strong> <a href="mailto:ahmedsameerbinan2@gmail.com">ahmedsameerbinan2@gmail.com</a></p>
         <p><strong>Response time:</strong> Within 7 working days</p>
         <p><strong>Grievance Officer (India):</strong> Binan — reachable at the email above as per the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021.</p>
-        <p style="margin-bottom:0"><strong>For Razorpay disputes:</strong> <a href="https://razorpay.com/support/" style="color:var(--primary)">Razorpay Support</a></p>
+        <p style="margin-top:1rem;font-size:0.9rem;color:var(--text-muted)">
+          <strong>Source Code:</strong> Public repository at 
+          <a href="https://github.com/binan-maker/WAStatusSaver" target="_blank" rel="noopener">github.com/binan-maker/WAStatusSaver</a>
+        </p>
+        <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--text-muted)">
+          <strong>Payment Support:</strong> For Razorpay-related issues, contact 
+          <a href="https://razorpay.com/support/" target="_blank" rel="noopener">Razorpay Support</a>
+        </p>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <footer>
-      <p>© 2026 StatusVault · An independent developer project · Not affiliated with WhatsApp LLC or Meta Platforms Inc.</p>
-      <nav>
-        <a href="../">Home</a>
-        <a href="../privacy-policy/">Privacy Policy</a>
-        <a href="../terms/">Terms &amp; Conditions</a>
-        <a href="../pricing/">Pricing</a>
-      </nav>
-    </footer>
-  </body>
+  <!-- Premium Footer -->
+  <footer>
+    <p>© 2026 StatusVault · An independent developer project · Not affiliated with WhatsApp LLC or Meta Platforms Inc.</p>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../privacy-policy/">Privacy Policy</a>
+      <a href="../terms/">Terms & Conditions</a>
+      <a href="../pricing/">Pricing</a>
+    </nav>
+  </footer>
+
+  <!-- Premium JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header scroll effect
+      const header = document.getElementById('header');
+      const onScroll = () => {
+        if (window.scrollY > 10) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      
+      // Scroll animations
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate').forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          el.style.transition = 'opacity 0.6s var(--ease-premium), transform 0.6s var(--ease-premium)';
+          observer.observe(el);
+        });
+      }
+      
+      // Smooth anchor scrolling with offset for fixed header
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const target = document.querySelector(targetId);
+          if (target) {
+            const headerOffset = document.getElementById('header').offsetHeight;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active section in TOC on scroll
+      const sections = document.querySelectorAll('section[id]');
+      const tocLinks = document.querySelectorAll('.toc a');
+      
+      if (sections.length && tocLinks.length) {
+        const tocObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              tocLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === `#${id}`) {
+                  link.style.color = 'var(--primary-light)';
+                  link.style.fontWeight = '600';
+                }
+              });
+            }
+          });
+        }, { threshold: 0.3, rootMargin: '-100px 0px -70% 0px' });
+        
+        sections.forEach(section => tocObserver.observe(section));
+      }
+      
+      console.log('⚖️ StatusVault Terms & Conditions Loaded – Premium & Compliant');
+    });
+  </script>
+</body>
 </html>
