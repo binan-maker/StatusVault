@@ -1,178 +1,982 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Privacy Policy – StatusVault</title>
-    <link rel="icon" type="image/x-icon" href="/StatusVault/favicon.ico">
-    <meta name="description" content="StatusVault Privacy Policy – GDPR, Play Store & Indian IT Act compliant." />
-    <style>
-      *, *::before, *::after { box-sizing: border-box; }
-      :root {
-        --bg: #0a0e1a;
-        --card: #111827;
-        --border: #1f2937;
-        --primary: #00c48c;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --heading: #f9fafb;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Privacy Policy – StatusVault</title>
+  <link rel="icon" type="image/x-icon" href="/StatusVault/favicon.ico">
+  <meta name="description" content="StatusVault Privacy Policy – GDPR, Play Store & Indian IT Act compliant. 100% offline media processing.">
+  <meta name="theme-color" content="#0a0e1a" />
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ===== 🔥 ULTRA-PREMIUM DESIGN VARIABLES ===== */
+    :root {
+      /* Deep Space Background */
+      --bg-deep: #030712;
+      --bg-primary: #0a0e1a;
+      --bg-elev-1: rgba(23, 28, 45, 0.85);
+      --bg-elev-2: rgba(31, 41, 55, 0.75);
+      --bg-glass: rgba(17, 24, 39, 0.65);
+      
+      /* Premium Color Palette */
+      --primary: #00c48c;
+      --primary-light: #34d399;
+      --primary-dark: #059669;
+      --primary-glow: rgba(0, 196, 140, 0.35);
+      --primary-glow-strong: rgba(0, 196, 140, 0.6);
+      
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.3);
+      
+      --gold: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-glow: rgba(245, 158, 11, 0.35);
+      
+      /* Typography */
+      --text-primary: #f9fafb;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      /* Advanced Effects */
+      --blur-xl: blur(24px);
+      --blur-2xl: blur(40px);
+      --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+      --shadow-glow: 0 0 60px var(--primary-glow);
+      --shadow-gold: 0 0 70px var(--gold-glow);
+      
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
+      --gradient-gold: linear-gradient(135deg, var(--gold), var(--gold-light));
+      --gradient-mesh: radial-gradient(ellipse at top, rgba(0,196,140,0.15), transparent 70%),
+                       radial-gradient(ellipse at bottom right, rgba(99,102,241,0.12), transparent 70%),
+                       radial-gradient(ellipse at bottom left, rgba(245,158,11,0.08), transparent 70%);
+      
+      /* Animation Curves */
+      --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      
+      /* Layout */
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --radius-xl: 48px;
+      --radius-full: 9999px;
+      --container: min(900px, 94vw);
+      --header-h: 80px;
+      
+      /* Borders */
+      --border-premium: 1px solid rgba(255, 255, 255, 0.08);
+      --border-glow: 1px solid rgba(0, 196, 140, 0.35);
+    }
+
+    /* ===== 🎨 GLOBAL RESET & BASE ===== */
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: var(--header-h);
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.75;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+    }
+    
+    /* ===== ✨ BACKGROUND MASTERPIECE ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: var(--gradient-mesh);
+      z-index: -3;
+      animation: meshFloat 30s ease-in-out infinite alternate;
+      opacity: 0.6;
+    }
+    
+    @keyframes meshFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(1%, -1%) scale(1.02); }
+      50% { transform: translate(-1%, 1%) scale(0.98); }
+      75% { transform: translate(1.5%, 0.5%) scale(1.01); }
+    }
+    
+    /* Animated noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      z-index: -2;
+      pointer-events: none;
+    }
+    
+    /* ===== 🎭 PREMIUM TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      color: var(--text-primary);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 1.875rem);
+      margin: 2.5rem 0 1.25rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+    
+    h3 {
+      font-size: 1.125rem;
+      margin: 1.75rem 0 0.75rem;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+    
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 70ch;
+    }
+    
+    a {
+      color: var(--primary-light);
+      text-decoration: none;
+      transition: all 0.3s var(--ease-premium);
+      position: relative;
+      font-weight: 500;
+    }
+    
+    a:hover {
+      color: var(--primary);
+    }
+    
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s var(--ease-premium);
+    }
+    
+    a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(0, 196, 140, 0.12);
+      color: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      border: 1px solid rgba(0, 196, 140, 0.25);
+    }
+    
+    /* ===== 🧭 PREMIUM HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-h);
+      background: rgba(3, 7, 18, 0.75);
+      backdrop-filter: var(--blur-xl);
+      border-bottom: var(--border-premium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+      z-index: 1000;
+      transition: all 0.4s var(--ease-premium);
+      gap: 1rem;
+    }
+    
+    header.scrolled {
+      background: rgba(3, 7, 18, 0.92);
+      border-bottom-color: rgba(0, 196, 140, 0.2);
+      box-shadow: var(--shadow-premium);
+    }
+    
+    .header-link {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .header-link:hover {
+      color: var(--primary-light);
+      background: rgba(0, 196, 140, 0.08);
+    }
+    
+    .dot { color: var(--text-dim); font-weight: 300; }
+    .page-title { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+    
+    /* ===== 📄 MAIN CONTENT ===== */
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: clamp(4rem, 10vw, 7rem) 1.5rem 5rem;
+      position: relative;
+    }
+    
+    /* ===== 🏷️ BADGE & META ===== */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 196, 140, 0.12);
+      border: var(--border-glow);
+      border-radius: var(--radius-full);
+      padding: 6px 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      animation: badgePulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes badgePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 196, 140, 0.4); }
+      50% { box-shadow: 0 0 0 8px rgba(0, 196, 140, 0); }
+    }
+    
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: var(--border-premium);
+    }
+    
+    .meta strong { color: var(--text-secondary); }
+    
+    /* ===== ✨ HIGHLIGHT BOX ===== */
+    .highlight {
+      background: linear-gradient(135deg, rgba(0,196,140,0.1), rgba(99,102,241,0.08));
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: var(--blur-xl);
+      border: var(--border-premium);
+    }
+    
+    .highlight::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gradient-primary);
+      animation: shine 3s ease-in-out infinite;
+    }
+    
+    @keyframes shine {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    
+    .highlight strong { color: var(--text-primary); }
+    
+    /* ===== 📋 CONTENT SECTIONS ===== */
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: calc(var(--header-h) + 2rem);
+    }
+    
+    ul {
+      margin: 0 0 1.25rem 1.5rem;
+      padding-left: 0.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.625rem;
+      color: var(--text-secondary);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+    
+    li strong { color: var(--text-primary); }
+    
+    /* ===== 🔐 CONTACT CARD ===== */
+    .contact-card {
+      background: var(--bg-glass);
+      border: var(--border-premium);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin: 2rem 0;
+      backdrop-filter: var(--blur-xl);
+      box-shadow: var(--shadow-premium);
+      transition: all 0.4s var(--ease-premium);
+      border-left: 4px solid var(--primary);
+    }
+    
+    .contact-card:hover {
+      border-color: rgba(0, 196, 140, 0.45);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow), var(--shadow-premium);
+    }
+    
+    .contact-card p {
+      margin-bottom: 0.875rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .contact-card p:last-child { margin-bottom: 0; }
+    
+    .contact-card strong {
+      color: var(--text-primary);
+      min-width: 140px;
+      display: inline-block;
+    }
+    
+    .contact-card a {
+      word-break: break-all;
+    }
+    
+    /* ===== 🛡️ PERMISSIONS TABLE ===== */
+    .permissions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    
+    .permission-card {
+      background: var(--bg-elev-1);
+      border: var(--border-premium);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .permission-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    
+    .permission-card.allowed {
+      border-left: 3px solid var(--primary);
+    }
+    
+    .permission-card.blocked {
+      border-left: 3px solid #ef4444;
+      opacity: 0.85;
+    }
+    
+    .permission-card h4 {
+      font-size: 0.95rem;
+      margin: 0 0 0.5rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .permission-card.allowed h4::before { content: '✓'; color: var(--primary); font-weight: 700; }
+    .permission-card.blocked h4::before { content: '✕'; color: #ef4444; font-weight: 700; }
+    
+    .permission-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    /* ===== 🔗 THIRD-PARTY SERVICES ===== */
+    .services-list {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--bg-elev-1);
+      border: var(--border-premium);
+      border-radius: var(--radius-md);
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .service-item:hover {
+      border-color: var(--primary);
+      transform: translateX(4px);
+    }
+    
+    .service-icon {
+      font-size: 1.5rem;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .service-item a {
+      margin-left: auto;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    
+    /* ===== 📜 DATA RETENTION TIMELINE ===== */
+    .retention-timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 1.5rem 0;
+    }
+    
+    .retention-timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+    
+    .retention-item {
+      position: relative;
+      padding: 1rem 0 1rem 1.5rem;
+      border-left: 3px solid transparent;
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .retention-item:hover {
+      border-left-color: var(--primary);
+      background: rgba(0, 196, 140, 0.04);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding-left: 2rem;
+    }
+    
+    .retention-item::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 1.5rem;
+      width: 12px;
+      height: 12px;
+      background: var(--bg-primary);
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      transition: all 0.3s var(--ease-premium);
+    }
+    
+    .retention-item:hover::before {
+      background: var(--primary);
+      transform: scale(1.2);
+    }
+    
+    .retention-item strong {
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    .retention-item span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    /* ===== 🦶 PREMIUM FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+      border-top: var(--border-premium);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4rem;
+      background: var(--bg-elev-1);
+      position: relative;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    
+    footer p { margin-bottom: 1.5rem; }
+    footer a { color: var(--primary-light); }
+    footer a:hover { color: var(--primary); }
+    
+    footer nav {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    footer nav a {
+      font-weight: 500;
+      position: relative;
+      padding: 4px 0;
+    }
+    
+    footer nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 100%; height: 1px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s var(--ease-premium);
+    }
+    
+    footer nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    
+    /* ===== ✨ ANIMATIONS & UTILS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate {
+      animation: fadeInUp 0.7s var(--ease-premium) forwards;
+      opacity: 0;
+    }
+    
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg-elev-2);
+      border-radius: 4px;
+      border: 2px solid var(--bg-deep);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+    
+    /* Selection */
+    ::selection {
+      background: var(--primary);
+      color: #030712;
+    }
+    
+    /* Focus */
+    a:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+      border-radius: var(--radius-sm);
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
       }
-      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.7; }
-      header { background: var(--card); border-bottom: 1px solid var(--border); padding: 20px 24px; display: flex; align-items: center; gap: 12px; }
-      header a { color: var(--primary); text-decoration: none; font-size: 14px; }
-      header a:hover { text-decoration: underline; }
-      .dot { color: var(--muted); }
-      main { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
-      h1 { font-size: 32px; font-weight: 800; color: var(--heading); margin: 0 0 8px; }
-      .meta { color: var(--muted); font-size: 14px; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-      .badge { display: inline-block; background-color: rgba(0,196,140,0.12); color: var(--primary); border: 1px solid rgba(0,196,140,0.3); border-radius: 20px; padding: 3px 12px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
-      h2 { font-size: 20px; font-weight: 700; color: var(--heading); margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-      h3 { font-size: 16px; font-weight: 600; color: var(--heading); margin: 20px 0 8px; }
-      p { margin: 0 0 16px; }
-      ul { margin: 0 0 16px; padding-left: 24px; }
-      li { margin-bottom: 6px; }
-      code { background: rgba(255,255,255,0.07); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
-      .highlight { background: rgba(0,196,140,0.08); border-left: 3px solid var(--primary); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
-      .contact-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 24px 0; }
-      .contact-card a { color: var(--primary); }
-      footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
-      footer a { color: var(--primary); text-decoration: none; }
-      footer a:hover { text-decoration: underline; }
-      footer nav { margin-top: 12px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="../">← StatusVault</a>
-      <span class="dot">·</span>
-      <span style="color:var(--muted);font-size:14px">Privacy Policy</span>
-    </header>
+      html { scroll-behavior: auto; }
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+      h2 { font-size: clamp(1.25rem, 6vw, 1.5rem); }
+      .meta { flex-direction: column; gap: 0.5rem; }
+      .contact-card p { flex-direction: column; gap: 0.25rem; }
+      .contact-card strong { min-width: auto; }
+    }
+    
+    /* Print */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+      header, body::before, body::after,
+      .highlight::before, .contact-card,
+      .permission-card, .service-item {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+      }
+      a { color: #0066cc; text-decoration: underline; }
+      a::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Premium Header -->
+  <header id="header">
+    <a href="../" class="header-link">
+      <span>←</span> StatusVault
+    </a>
+    <span class="dot">·</span>
+    <span class="page-title">Privacy Policy</span>
+  </header>
 
-    <main>
-      <div class="badge">Legal Document</div>
-      <h1>Privacy Policy</h1>
-      <div class="meta">
-        Last updated: <strong>April 17, 2026</strong> &nbsp;·&nbsp;
-        Effective date: <strong>April 17, 2026</strong> &nbsp;·&nbsp;
-        App version: <strong>1.3.3</strong>
-      </div>
+  <main>
+    <div class="badge animate">🔐 Legal Document</div>
+    
+    <h1 class="animate delay-1">Privacy Policy</h1>
+    
+    <div class="meta animate delay-2">
+      <span>Last updated: <strong>May 1, 2026</strong></span>
+      <span>·</span>
+      <span>Effective date: <strong>May 1, 2026</strong></span>
+      <span>·</span>
+      <span>App version: <strong>1.4.0+</strong></span>
+      <span>·</span>
+      <span>Package: <code>com.binan.statussaver</code></span>
+    </div>
 
-      <div class="highlight">
-        <strong>The short version:</strong> StatusVault processes all media 100% on your device. We do not upload, store, or view any of your WhatsApp statuses or saved files. The only data we collect is what is strictly necessary for your Pro subscription and app analytics.
-      </div>
+    <!-- Executive Summary -->
+    <div class="highlight animate delay-3">
+      <strong>The short version:</strong> StatusVault processes all WhatsApp status media <strong>100% on your device</strong>. We do not upload, store, or view your statuses, images, or videos. The only data we collect is what is strictly necessary for Pro subscription verification (via Firebase) and anonymized ad analytics (via AdMob for free users). Your media never leaves your phone.
+    </div>
 
+    <!-- Section 1 -->
+    <section class="animate">
       <h2>1. Who We Are</h2>
-      <p>StatusVault ("App", "we", "us") is an independent Android application developed by Binan (the "Developer", "I"). The app allows users to view, save, and share WhatsApp and WhatsApp Business statuses on Android devices.</p>
-      <p>Contact: <strong>ahmedsameerbinan2@gmail.com</strong></p>
-      <p>This Privacy Policy applies to the StatusVault Android application and the associated website.</p>
+      <p>StatusVault ("App", "we", "us") is an independent Android application developed by Binan (the "Developer"). The app allows users to view, save, and share WhatsApp and WhatsApp Business statuses that are already stored locally on their Android device.</p>
+      <p><strong>Contact:</strong> <a href="mailto:ahmedsameerbinan2@gmail.com">ahmedsameerbinan2@gmail.com</a></p>
+      <p>This Privacy Policy applies to the StatusVault Android application (package: <code>com.binan.statussaver</code>) and associated web properties.</p>
+    </section>
 
+    <!-- Section 2 -->
+    <section class="animate delay-1">
       <h2>2. Information We Collect</h2>
-
-      <h3>2.1 Information You Provide</h3>
+      
+      <h3>2.1 Information You Provide (Optional)</h3>
       <ul>
-        <li><strong>Google Account (optional):</strong> If you choose to sign in with Google to sync your Pro subscription, we collect your Google UID, email address, and display name. Sign-in is only required to use the paid Pro subscription across devices.</li>
-        <li><strong>Payment Information:</strong> Payments are processed by Razorpay. We never see or store your card number, bank details, or UPI PIN. Razorpay shares only a payment confirmation token and your email/phone with us, which we store to verify your subscription.</li>
+        <li><strong>Google Account (optional):</strong> If you choose to sign in with Google to sync your Pro subscription across devices, we collect your Google UID, email address, and display name. <em>Sign-in is only required for Pro subscription sync—not for core app functionality.</em></li>
+        <li><strong>Payment Information:</strong> Payments are processed by <strong>Razorpay</strong>. We <strong>never</strong> see or store your card number, bank details, UPI PIN, or CVV. Razorpay shares only a payment confirmation token and your email/phone with us, which we store solely to verify your Pro subscription status.</li>
       </ul>
 
       <h3>2.2 Information Collected Automatically</h3>
       <ul>
-        <li><strong>Device ID:</strong> A unique identifier generated on your device, used only to associate your subscription with your device when you are not signed in.</li>
-        <li><strong>Android Version:</strong> Collected to determine the correct storage method (Legacy / Scoped / SAF) for your device.</li>
-        <li><strong>Subscription Status:</strong> Stored in Firebase Firestore (Google Cloud) to validate your Pro membership status across devices and sessions.</li>
-        <li><strong>AdMob Analytics:</strong> Google AdMob may collect anonymised analytics and ad-interaction data as described in Google's Privacy Policy. This applies only to free-tier users seeing ads.</li>
-        <li><strong>Crash Reports:</strong> If the app crashes, anonymised crash data may be sent to Expo/EAS to help us fix bugs. No personal data is included.</li>
+        <li><strong>Device Identifier:</strong> A unique identifier generated on your device (via <code>expo-device</code>), used only to associate your subscription with your device when you are not signed in with Google.</li>
+        <li><strong>Android Version & Device Model:</strong> Collected to determine the correct storage access method (Legacy / Scoped Storage / Storage Access Framework) for your specific Android version.</li>
+        <li><strong>Subscription Status:</strong> Stored in <strong>Google Firebase Firestore</strong> (Google Cloud) to validate your Pro membership status across devices and app sessions. This includes your purchase timestamp and plan duration.</li>
+        <li><strong>AdMob Analytics (Free Tier Only):</strong> Google AdMob may collect anonymized analytics and ad-interaction data (e.g., ad impressions, clicks) as described in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. This applies <strong>only</strong> to free-tier users who see ads.</li>
+        <li><strong>Crash & Error Reports:</strong> If the app crashes, anonymized crash data (stack traces, device info) may be sent via Expo/EAS or Firebase Crashlytics to help us fix bugs. <strong>No personal data, media files, or WhatsApp content is included.</strong></li>
+        <li><strong>App Usage Metrics (Optional):</strong> Basic, anonymized usage events (e.g., "app opened", "status saved") may be logged locally via <code>@react-native-async-storage/async-storage</code> for feature improvement. This data is never transmitted to our servers unless you explicitly opt-in to analytics.</li>
       </ul>
 
-      <h3>2.3 What We Do NOT Collect</h3>
+      <h3>2.3 What We Do <strong>NOT</strong> Collect</h3>
       <ul>
-        <li>We do not access, read, upload, or transmit any WhatsApp statuses, images, or videos to any server.</li>
-        <li>We do not read your WhatsApp messages or contacts.</li>
-        <li>We do not track your location.</li>
-        <li>We do not sell your data to third parties.</li>
-        <li>We do not use your data for targeted advertising (beyond what Google AdMob does autonomously on the free tier).</li>
+        <li>❌ We do <strong>not</strong> access, read, upload, or transmit any WhatsApp statuses, images, or videos to any server.</li>
+        <li>❌ We do <strong>not</strong> read your WhatsApp messages, contacts, or chat history.</li>
+        <li>❌ We do <strong>not</strong> track your location, IP address, or network information.</li>
+        <li>❌ We do <strong>not</strong> sell, rent, or share your personal data with third parties for marketing.</li>
+        <li>❌ We do <strong>not</strong> use your data for targeted advertising beyond what Google AdMob autonomously serves to free-tier users.</li>
+        <li>❌ We do <strong>not</strong> request or use sensitive permissions like <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, <code>RECORD_AUDIO</code>, or <code>SYSTEM_ALERT_WINDOW</code> (these are explicitly blocked in our app configuration).</li>
       </ul>
+    </section>
 
+    <!-- Section 3 -->
+    <section class="animate delay-2">
       <h2>3. How We Use Your Information</h2>
       <ul>
-        <li>To verify and activate your Pro subscription.</li>
-        <li>To send you a payment receipt (via Razorpay's email system).</li>
-        <li>To display ads to free-tier users via Google AdMob.</li>
-        <li>To diagnose and fix technical issues using anonymised crash data.</li>
-        <li>To communicate with you about support requests you initiate.</li>
+        <li>To verify and activate your Pro subscription across devices (when signed in with Google).</li>
+        <li>To send you a payment receipt via Razorpay's email/SMS system.</li>
+        <li>To display non-personalized ads to free-tier users via Google AdMob.</li>
+        <li>To diagnose and fix technical issues using anonymized crash data.</li>
+        <li>To communicate with you about support requests you initiate via email.</li>
+        <li>To comply with legal obligations (e.g., Indian GST record-keeping for payment logs).</li>
       </ul>
+    </section>
 
-      <h2>4. Data Storage and Security</h2>
-      <p>Subscription data is stored in <strong>Google Firebase Firestore</strong>, which is hosted on Google Cloud infrastructure with encryption at rest and in transit (TLS/SSL). Payment order records are retained for up to 7 years as required by Indian tax law (GST compliance).</p>
-      <p>We implement the following security measures:</p>
+    <!-- Section 4 -->
+    <section class="animate delay-3">
+      <h2>4. Data Storage & Security</h2>
+      <p>Subscription and authentication data is stored in <strong>Google Firebase Firestore</strong>, hosted on Google Cloud infrastructure with encryption at rest (AES-256) and in transit (TLS 1.2+).</p>
+      
+      <p><strong>Security measures we implement:</strong></p>
       <ul>
-        <li>HMAC-SHA256 signature verification on all Razorpay payments</li>
+        <li>HMAC-SHA256 signature verification on all Razorpay payment webhooks</li>
         <li>Firebase Authentication token verification on every authenticated API request</li>
-        <li>No raw payment credentials stored on our servers</li>
-        <li>All API communication over HTTPS</li>
+        <li>No raw payment credentials, passwords, or media files stored on our servers</li>
+        <li>All API communication enforced over HTTPS with certificate pinning (via Expo)</li>
+        <li>Local auth tokens stored in encrypted <code>AsyncStorage</code> with React Native persistence</li>
+        <li>Regular security audits of Firebase security rules and server endpoints</li>
       </ul>
+      
+      <p><strong>Payment records</strong> are retained for up to 7 years as required by Indian tax law (GST compliance). All other personal data is deleted within 30 days of account deletion request.</p>
+    </section>
 
+    <!-- Section 5 -->
+    <section class="animate">
       <h2>5. Third-Party Services</h2>
-      <ul>
-        <li><strong>Razorpay:</strong> Payment processing. <a href="https://razorpay.com/privacy/" style="color:var(--primary)">Razorpay Privacy Policy</a></li>
-        <li><strong>Google Firebase:</strong> Authentication and database. <a href="https://firebase.google.com/support/privacy" style="color:var(--primary)">Firebase Privacy Policy</a></li>
-        <li><strong>Google AdMob:</strong> Advertising (free users only). <a href="https://policies.google.com/privacy" style="color:var(--primary)">Google Privacy Policy</a></li>
-        <li><strong>Google Sign-In:</strong> Optional account authentication. <a href="https://policies.google.com/privacy" style="color:var(--primary)">Google Privacy Policy</a></li>
-        <li><strong>Expo / EAS:</strong> App runtime and crash reporting. <a href="https://expo.dev/privacy" style="color:var(--primary)">Expo Privacy Policy</a></li>
-      </ul>
+      <div class="services-list">
+        <div class="service-item">
+          <span class="service-icon">💳</span>
+          <div>
+            <strong>Razorpay</strong> – Payment processing (RBI licensed). 
+            <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Privacy Policy →</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">🔥</span>
+          <div>
+            <strong>Google Firebase</strong> – Authentication, Firestore database, Crashlytics. 
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">📱</span>
+          <div>
+            <strong>Google AdMob</strong> – Advertising (free users only). 
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">🔑</span>
+          <div>
+            <strong>Google Sign-In</strong> – Optional account authentication for Pro sync. 
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-icon">⚡</span>
+          <div>
+            <strong>Expo / EAS</strong> – App runtime, build services, and optional crash reporting. 
+            <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Privacy Policy →</a>
+          </div>
+        </div>
+      </div>
+      <p><em>We do not share your personal data with these services beyond what is strictly necessary for their documented functionality.</em></p>
+    </section>
 
-      <h2>6. Storage Permissions</h2>
-      <p>StatusVault requests storage permissions solely to read WhatsApp status files from your device and to save media to your gallery. We never access any other files on your device. All file operations happen locally — no files are ever transmitted to any server.</p>
-      <p>Permissions requested:</p>
-      <ul>
-        <li><code>READ_EXTERNAL_STORAGE</code> / <code>READ_MEDIA_IMAGES</code> / <code>READ_MEDIA_VIDEO</code> — to read WhatsApp status files</li>
-        <li><code>WRITE_EXTERNAL_STORAGE</code> — to save statuses to your gallery (Android &lt; 10 only)</li>
-        <li><code>POST_NOTIFICATIONS</code> — for optional status reminder notifications</li>
-        <li><code>com.google.android.gms.permission.AD_ID</code> — required by Google AdMob</li>
-      </ul>
+    <!-- Section 6 -->
+    <section class="animate delay-1">
+      <h2>6. Android Permissions Explained</h2>
+      <p>StatusVault requests only the minimum permissions required to function. All file operations happen locally—no files are transmitted to any server.</p>
+      
+      <div class="permissions-grid">
+        <div class="permission-card allowed">
+          <h4>WRITE_EXTERNAL_STORAGE</h4>
+          <p>Required to save WhatsApp statuses to your device gallery (Android &lt; 10). On Android 10+, we use Scoped Storage APIs instead.</p>
+        </div>
+        <div class="permission-card allowed">
+          <h4>POST_NOTIFICATIONS</h4>
+          <p>Optional: Enables status reminder notifications. You can disable this anytime in Android Settings → Apps → StatusVault → Notifications.</p>
+        </div>
+        <div class="permission-card allowed">
+          <h4>RECEIVE_BOOT_COMPLETED</h4>
+          <p>Allows scheduled notifications to persist after device restart. No data is collected or transmitted.</p>
+        </div>
+        <div class="permission-card allowed">
+          <h4>VIBRATE</h4>
+          <p>Provides haptic feedback for UI interactions. No data collected.</p>
+        </div>
+        <div class="permission-card blocked">
+          <h4>READ_MEDIA_IMAGES / VIDEO</h4>
+          <p>Explicitly <strong>blocked</strong> in our app configuration. We access WhatsApp status files via Android's public status directory, not your media library.</p>
+        </div>
+        <div class="permission-card blocked">
+          <h4>RECORD_AUDIO / LOCATION</h4>
+          <p>Explicitly <strong>blocked</strong>. StatusVault never records audio or accesses your location.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section 7 -->
+    <section class="animate delay-2">
       <h2>7. Children's Privacy</h2>
       <p>StatusVault is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information to us, please contact us and we will delete it promptly.</p>
+    </section>
 
-      <h2>8. Your Rights (GDPR &amp; Indian IT Act)</h2>
-      <p>If you are in the European Economic Area or India, you have the following rights:</p>
+    <!-- Section 8 -->
+    <section class="animate delay-3">
+      <h2>8. Your Rights (GDPR & Indian IT Act)</h2>
+      <p>If you are in the European Economic Area or India, you have the following rights regarding your personal data:</p>
       <ul>
         <li><strong>Access:</strong> Request a copy of your personal data we hold.</li>
-        <li><strong>Correction:</strong> Request correction of inaccurate data.</li>
-        <li><strong>Deletion:</strong> Request deletion of your account and associated data. You can do this directly in the app via Settings → Delete Account, or by emailing us.</li>
-        <li><strong>Portability:</strong> Request your data in a machine-readable format.</li>
-        <li><strong>Objection:</strong> Object to processing of your data.</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data.</li>
+        <li><strong>Deletion:</strong> Request deletion of your account and associated data. You can do this directly in the app via <strong>Settings → Delete Account</strong>, or by emailing us.</li>
+        <li><strong>Portability:</strong> Request your data in a structured, machine-readable format.</li>
+        <li><strong>Objection:</strong> Object to processing of your data for legitimate interests.</li>
+        <li><strong>Withdraw Consent:</strong> Withdraw consent for optional data processing at any time.</li>
       </ul>
-      <p>To exercise these rights, contact us at <strong>ahmedsameerbinan2@gmail.com</strong>.</p>
+      <p>To exercise these rights, contact us at <a href="mailto:ahmedsameerbinan2@gmail.com">ahmedsameerbinan2@gmail.com</a>. We respond to all legitimate requests within 7 working days.</p>
+    </section>
 
-      <h2>9. Data Retention</h2>
-      <ul>
-        <li><strong>Subscription records:</strong> Retained for 7 years (GST/tax compliance)</li>
-        <li><strong>Account data:</strong> Deleted within 30 days of account deletion request</li>
-        <li><strong>Payment order logs:</strong> Retained for 7 years</li>
-        <li><strong>Crash/analytics data:</strong> Anonymised; retained per Expo's policy</li>
-      </ul>
+    <!-- Section 9 -->
+    <section class="animate">
+      <h2>9. Data Retention Schedule</h2>
+      <div class="retention-timeline">
+        <div class="retention-item">
+          <strong>Subscription records</strong>
+          <span>Retained for 7 years (Indian GST/tax compliance requirement)</span>
+        </div>
+        <div class="retention-item">
+          <strong>Account data (Google UID, email)</strong>
+          <span>Deleted within 30 days of account deletion request</span>
+        </div>
+        <div class="retention-item">
+          <strong>Payment order logs (Razorpay)</strong>
+          <span>Retained for 7 years (financial regulatory requirement)</span>
+        </div>
+        <div class="retention-item">
+          <strong>Crash/analytics data</strong>
+          <span>Anonymized; retained per Expo/Firebase policy (typically 90 days)</span>
+        </div>
+        <div class="retention-item">
+          <strong>Local app preferences</strong>
+          <span>Stored on your device only; deleted when you uninstall the app</span>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section 10 -->
+    <section class="animate delay-1">
       <h2>10. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy. For material changes, we will notify you via an in-app notice.</p>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we do, we will update the "Last updated" date at the top of this page.</p>
+      <p>Continued use of the app after changes constitutes acceptance of the updated policy. For material changes that affect your rights, we will notify you via an in-app notice at least 7 days before the changes take effect.</p>
+      <p>We encourage you to review this policy periodically to stay informed about how we protect your privacy.</p>
+    </section>
 
+    <!-- Section 11 -->
+    <section class="animate delay-2">
       <h2>11. Contact Us</h2>
       <div class="contact-card">
-        <p><strong>Developer:</strong> Binan</p>
-        <p><strong>App:</strong> StatusVault (com.binan.statussaver)</p>
+        <p><strong>Developer:</strong> Binan (Ahmed Sameer Binan)</p>
+        <p><strong>App:</strong> StatusVault (<code>com.binan.statussaver</code>)</p>
         <p><strong>Email:</strong> <a href="mailto:ahmedsameerbinan2@gmail.com">ahmedsameerbinan2@gmail.com</a></p>
         <p><strong>Response time:</strong> Within 7 working days</p>
-        <p style="margin-bottom:0"><strong>Grievance Officer (India):</strong> Binan — reachable at the email above as per the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021.</p>
+        <p><strong>Grievance Officer (India):</strong> Binan — reachable at the email above as per the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021.</p>
+        <p style="margin-top:1rem;font-size:0.9rem;color:var(--text-muted)">
+          <strong>Source Code:</strong> Public repository at 
+          <a href="https://github.com/binan-maker/WAStatusSaver" target="_blank" rel="noopener">github.com/binan-maker/WAStatusSaver</a>
+        </p>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <footer>
-      <p>© 2026 StatusVault · An independent developer project · Not affiliated with WhatsApp LLC or Meta Platforms Inc.</p>
-      <nav>
-        <a href="../">Home</a>
-        <a href="../privacy-policy/">Privacy Policy</a>
-        <a href="../terms/">Terms &amp; Conditions</a>
-        <a href="../pricing/">Pricing</a>
-      </nav>
-    </footer>
-  </body>
+  <!-- Premium Footer -->
+  <footer>
+    <p>© 2026 StatusVault · An independent developer project · Not affiliated with WhatsApp LLC or Meta Platforms Inc.</p>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../privacy-policy/">Privacy Policy</a>
+      <a href="../terms/">Terms & Conditions</a>
+      <a href="../pricing/">Pricing</a>
+    </nav>
+  </footer>
+
+  <!-- Premium JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Header scroll effect
+      const header = document.getElementById('header');
+      const onScroll = () => {
+        if (window.scrollY > 10) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      
+      // Scroll animations
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate').forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          el.style.transition = 'opacity 0.6s var(--ease-premium), transform 0.6s var(--ease-premium)';
+          observer.observe(el);
+        });
+      }
+      
+      // Smooth anchor scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+      
+      console.log('🔐 StatusVault Privacy Policy Loaded – Premium & Compliant');
+    });
+  </script>
+</body>
 </html>
